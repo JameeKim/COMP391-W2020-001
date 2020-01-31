@@ -1,20 +1,27 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float speed;
+    public float minX, maxX, minY, maxY;
+
+    private Rigidbody2D rigidBody;
+
     void Start()
     {
-
+        rigidBody = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float horiz = Input.GetAxis("Horizontal");
+        float vert = Input.GetAxis("Vertical");
 
-        GetComponent<Rigidbody2D>().velocity = new Vector2(horiz, 0.0f);
+        rigidBody.velocity = new Vector2(horiz, vert) * speed;
+
+        Vector2 currentPosition = rigidBody.position;
+        rigidBody.position = new Vector2(
+            Mathf.Clamp(currentPosition.x, minX, maxX),
+            Mathf.Clamp(currentPosition.y, minY, maxY));
     }
 }
