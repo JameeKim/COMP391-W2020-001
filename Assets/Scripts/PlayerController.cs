@@ -11,12 +11,12 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rigidBody;
     private float timer = 0f;
 
-    void Start()
+    private void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         float horiz = Input.GetAxis("Horizontal");
         float vert = Input.GetAxis("Vertical");
