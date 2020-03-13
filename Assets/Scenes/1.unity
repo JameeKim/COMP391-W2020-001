@@ -280,11 +280,12 @@ GameObject:
   m_Component:
   - component: {fileID: 955501735}
   - component: {fileID: 955501734}
+  - component: {fileID: 955501738}
   - component: {fileID: 955501736}
   - component: {fileID: 955501737}
   m_Layer: 0
-  m_Name: BattleShip
-  m_TagString: Untagged
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -394,6 +395,56 @@ MonoBehaviour:
   laserSpawn: {fileID: 1929336575}
   laser: {fileID: 6677280829684714358, guid: fd5bcaeb02747c84790b0c42971c25bc, type: 3}
   fireInterval: 0.1
+--- !u!60 &955501738
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955501733}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.2, y: 1.2}
+    newSize: {x: 1.2, y: 1.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.48999998, y: -0.099999994}
+      - {x: 0.56, y: -0.06}
+      - {x: 0.57, y: -0.01}
+      - {x: 0.57, y: 0.02}
+      - {x: 0.53, y: 0.07}
+      - {x: 0.48999998, y: 0.099999994}
+      - {x: 0.22, y: 0.25}
+      - {x: -0.16, y: 0.41}
+      - {x: -0.38, y: 0.41}
+      - {x: -0.45, y: 0.38}
+      - {x: -0.51, y: 0.32999998}
+      - {x: -0.48, y: 0.21}
+      - {x: -0.42, y: 0.089999996}
+      - {x: -0.39, y: 0.06}
+      - {x: -0.41, y: -0.099999994}
+      - {x: -0.48, y: -0.17999999}
+      - {x: -0.51, y: -0.29999998}
+      - {x: -0.51, y: -0.34}
+      - {x: -0.45999998, y: -0.39}
+      - {x: -0.26, y: -0.42}
+      - {x: -0.16, y: -0.42}
+      - {x: 0.049999997, y: -0.32}
+      - {x: 0.13, y: -0.25}
+      - {x: 0.22999999, y: -0.26}
+      - {x: 0.42, y: -0.12}
 --- !u!1 &1073538355
 GameObject:
   m_ObjectHideFlags: 0
